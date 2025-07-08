@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment folder
+venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# VSCode settings (if you use VSCode)
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Python environment variables
+.env
