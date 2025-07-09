@@ -83,6 +83,8 @@ def parse_fighter(url):
             stat_dict['SLpM'] = value
         elif label == "Str. Acc.":
             stat_dict['Str_Acc'] = value
+        elif label == "Str. Def":
+            stat_dict["Str_Def"] = value
         elif label == "SApM":
             stat_dict['SApM'] = value
         elif label == "Str. Def.":
