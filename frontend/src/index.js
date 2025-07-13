@@ -4,6 +4,9 @@
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
+
+// JS entry point that renders React app
+
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>

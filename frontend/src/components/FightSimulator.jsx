@@ -1,0 +1,1 @@
+// Custom interactive component for UI logic

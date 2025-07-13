@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+// Top-level React component
+
 export default function App() {
   const [fighters, setFighters] = useState([]);
   const [fighter1, setFighter1] = useState("");
