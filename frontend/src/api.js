@@ -5,4 +5,3 @@ export async function simulateFight(fighter1, fighter2) {
     if (!response.ok) throw new Error("Fight simulation failed.");
     return response.json();
   }
-  

@@ -1,7 +1,7 @@
 // Custom interactive component for UI logic
 
 import { useState } from 'react'
-import { simulateFight } from '../api/api'
+import { simulateFight } from './api'
 
 function FightSimulator() {
     const [fighter1, setFighter1] = useState('')
