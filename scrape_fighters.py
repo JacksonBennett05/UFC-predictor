@@ -108,7 +108,7 @@ def parse_fighter(url):
 
 def scrape_all_fighters():
     all_fighters = []
-    for letter in 'Q':
+    for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
         print(f"Scraping fighters starting with '{letter}'...")
         links = get_fighter_links(letter)
         for link in links:

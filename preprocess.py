@@ -12,7 +12,7 @@ def load_fighter_data(filepath='fighters.csv') -> dict:
 
                 fighters[row["Name"]] = {
                     "Name": row["Name"],
-                    "Height": int(row["Height"]) if row["Height"] else None,
+                    "Height": float(row["Height"]) if row["Height"] else None,
                     "Reach": int(row["Reach"].replace('"', '').strip()) if row["Reach"] != '--' else None,
                     "Wins": int(row["Wins"]),
                     # "Draws": int(row["Draws"]),
