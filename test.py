@@ -1,4 +1,4 @@
-from preprocess import load_fighter_data
+from backend.preprocess import load_fighter_data
 
 # Load the data
 fighters = load_fighter_data("fighters.csv")
