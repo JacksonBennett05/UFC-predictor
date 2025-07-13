@@ -1,5 +1,5 @@
 import random
-
+from config import STAT_WEIGHTS
 # Input dicts of fighter stats then applies rule-based logic (reach longer = +1point) ties are randomly broken
 # Returns winner's name and explanation
 
@@ -9,10 +9,10 @@ def predict_outcome(f1_dict, f2_dict) -> (str, str):
 
     # Reach
     if (f1_dict.get('Reach', 0) > f2_dict.get('Reach', 0)):
-        fighter1_score += 1
+        fighter1_score += 1 * STAT_WEIGHTS["Reach"]
         print(f"{f1_dict['Name']} wins Reach")
     elif (f1_dict.get('Reach', 0) < f2_dict.get('Reach', 0)):
-        fighter2_score += 1
+        fighter2_score += 1 * STAT_WEIGHTS["Reach"]
         print(f"{f2_dict['Name']} wins Reach")
 
     # Win Percentage
@@ -30,50 +30,50 @@ def predict_outcome(f1_dict, f2_dict) -> (str, str):
 
     # SLpM
     if (f1_dict.get('SLpM') > f2_dict.get('SLpM')):
-        fighter1_score += 1
+        fighter1_score += 1 *STAT_WEIGHTS["SLpM"]
         print(f"{f1_dict['Name']} wins SLpM")
     elif (f1_dict.get('SLpM') < f2_dict.get('SLpM')):
-        fighter2_score += 1
+        fighter2_score += 1 * STAT_WEIGHTS["SLpM"]
         print(f"{f2_dict['Name']} wins SLpM")
 
     # Str_Acc
     if (f1_dict.get('Str_Acc') > f2_dict.get('Str_Acc')):
-        fighter1_score += 1.5
+        fighter1_score += 1 * STAT_WEIGHTS["Str_Acc"]
         print(f"{f1_dict['Name']} wins Striking Accuracy")
     elif (f1_dict.get('Str_Acc') < f2_dict.get('Str_Acc')):
-        fighter2_score += 1.5
+        fighter2_score += 1 * STAT_WEIGHTS["Str_Acc"]
         print(f"{f2_dict['Name']} wins Striking Accuracy")
 
     # SApM (lower is better)
     if (f1_dict.get('SApM') < f2_dict.get('SApM')):
-        fighter1_score += 1.5
+        fighter1_score += -1 * STAT_WEIGHTS["SApM"] 
         print(f"{f1_dict['Name']} wins Strikes Absorbed")
     elif (f1_dict.get('SApM') > f2_dict.get('SApM')):
-        fighter2_score += 1.5
+        fighter2_score += -1 * STAT_WEIGHTS["SApM"]
         print(f"{f2_dict['Name']} wins Strikes Absorbed")
 
     # Str_Def
     if (f1_dict.get('Str_Def') > f2_dict.get('Str_Def')):
-        fighter1_score += 1
+        fighter1_score += 1 * STAT_WEIGHTS["Str_Def"]
         print(f"{f1_dict['Name']} wins Striking Defense")
     elif (f1_dict.get('Str_Def') < f2_dict.get('Str_Def')):
-        fighter2_score += 1
+        fighter2_score += 1 * STAT_WEIGHTS["Str_Def"]
         print(f"{f2_dict['Name']} wins Striking Defense")
 
     # TD_Avg
     if (f1_dict.get('TD_Avg') > f2_dict.get('TD_Avg')):
-        fighter1_score += 1
+        fighter1_score += 1 * STAT_WEIGHTS["TD_Avg"]
         print(f"{f1_dict['Name']} wins Takedown Avg")
     elif (f1_dict.get('TD_Avg') < f2_dict.get('TD_Avg')):
-        fighter2_score += 1
+        fighter2_score += 1 * STAT_WEIGHTS["TD_Avg"]
         print(f"{f2_dict['Name']} wins Takedown Avg")
 
     # TD_Def
     if (f1_dict.get('TD_Def') > f2_dict.get('TD_Def')):
-        fighter1_score += 1
+        fighter1_score += 1 * STAT_WEIGHTS["TD_Def"]
         print(f"{f1_dict['Name']} wins Takedown Defense")
     elif (f1_dict.get('TD_Def') < f2_dict.get('TD_Def')):
-        fighter2_score += 1
+        fighter2_score += 1 * STAT_WEIGHTS["TD_Def"]
         print(f"{f2_dict['Name']} wins Takedown Defense")
 
     # Determine winner
