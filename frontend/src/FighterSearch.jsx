@@ -66,14 +66,9 @@ function FighterSearch({ onSelect }) {
           className="search-results"
           style={{
             position: "absolute",
-            top: "40px",
             backgroundColor: "#fff",
-            color: "#000",
             border: "1px solid #ccc",
-            zIndex: 10,
             listStyle: "none",
-            padding: 0,
-            // margin: 0,
           }}
         >
           {results.map((fighter, idx) => (

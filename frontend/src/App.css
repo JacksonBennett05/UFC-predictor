@@ -18,7 +18,7 @@
 
 
 .fighter-column1 {
-  width: 400px;
+  /* width: 400px; */
   float: left;
   height: 300px;
   flex: 1;
@@ -27,12 +27,24 @@
 }
 
 .fighter-column2 {
-  width: 500px;
+  /* width: 500px; */
   float:left;
   height: 300px;
-  
-
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.fight-sim {
+  margin-left: 15px;
+}
+
+.fighter-column1 label {
+  text-align: center;
+  display: block;
+}
+
+.fighter-column2 label {
+  text-align: center;
+  display: block;
 }
