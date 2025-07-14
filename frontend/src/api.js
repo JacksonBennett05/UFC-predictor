@@ -1,7 +1,24 @@
+const API_BASE_URL = "http://127.0.0.1:5000";
+
 export async function simulateFight(fighter1, fighter2) {
-    const response = await fetch(
-      `http://localhost:5000/simulate?f1=${encodeURIComponent(fighter1)}&f2=${encodeURIComponent(fighter2)}`
-    );
-    if (!response.ok) throw new Error("Fight simulation failed.");
-    return response.json();
+  try {
+    const response = await fetch(`${API_BASE_URL}/simulate`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ fighter1, fighter2 })
+    });
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error("Error calling simulate API:", error);
+    throw error;
   }
+}
