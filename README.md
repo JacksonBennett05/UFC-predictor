@@ -29,6 +29,22 @@ A Python tool that scrapes UFCStats.com and predicts the winner of a hypothetica
    #Enter two fighter names when prompted.
    python simulate.py
 
+## Running the Application
+
+To run the application, you need to start both the frontend and backend servers. Use two separate terminals for this:
+
+### 1. Start the Backend Server
+In the first terminal, navigate to the `backend` folder and run the following command:
+```bash
+python server.py
+```
+
+### 2. Start the frontend
+In a second terminal navigate to the `frontend` folder and run the following:
+```bash
+npm run dev
+```
+This will start the frontend development server, once both are running open the browser and go to the URL provided by the frontend serve
 
 ## How Prediction Works
 
