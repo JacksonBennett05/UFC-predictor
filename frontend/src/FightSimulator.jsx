@@ -40,6 +40,7 @@ function FightSimulator() {
         <p>Select two fighters to simulate a match</p>
       </div>
 
+      <div className="fight-form">
       <form onSubmit={handleSubmit}>
         <div className="search-container">
           <div className="fighter-column1">
@@ -57,6 +58,7 @@ function FightSimulator() {
         </div>
         </div>
       </form>
+      </div>
 
       {result && (
         <div className="result">

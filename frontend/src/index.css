@@ -4,30 +4,110 @@
     padding: 0px;
 }
 
+
+
+.fight-sim {
+  gap: 0px;
+}
+
 .header {
-  /* margin-left: 200px;
-  margin-right: 200px; */
+  background: rounded;  
+  margin-left: 200px;
+  margin-right: 200px;
   text-align: center;
   background-color: black;
   color: red;
+  border-radius: 10px;
+  border: 3px solid goldenrod;
+}
+
+.fight-form {
+  display: flex; 
+  align-items: flex-start;
+  justify-content: center; 
+  gap: 20px;
 }
 
 .search-container {
   margin-top: 50px;
+  gap: 100px;
   text-align: center;
   display: flex;  
-  justify-content: center;  
-  /* gap: 10px;    */
 }
 
 .fighter-column1,
 .fighter-column2 {
-  padding: 0;               
-  margin: 0;
-  width: auto;
-  flex: 1;
+  border-radius: 10px;
+  flex: 0; 
+  display: flex;
+  flex-direction: column;
 }
 
-.fight-button {
+.fighter-column1 label,
+.fighter-column2 label {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+
+.fighter-search {
+  position: relative;
+}
+
+.search-results {
+  text-align: left;
+  position: absolute;       /* make dropdown appear over content */
+  top: 100%;                /* directly below input */
+  left: 0;
+  width: 100%;
+  gap: 50px;
+  max-height: 200px;        /* limit height */
+  overflow-y: scroll;    
+  border: 1px solid gold;
+  border-radius: 5px;
+  list-style: none;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 8px 12px;
   cursor: pointer;
+  color: black;
+}
+
+.search-results li:hover {
+  background-color: #91bce5;
+  color: black;
+}
+
+.fight-button button {
+  background-color: black;
+  color: gold;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border-color: gold;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fight-button button:hover {
+  background-color: gold;
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0 0 12px gold;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 15px;
+  background: black;
+  color: gold;
+  font-size: 22px;
+  font-weight: bold;
+  border: 2px solid gold;
+  border-radius: 10px;
+  display: inline-block;
 }

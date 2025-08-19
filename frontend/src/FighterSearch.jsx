@@ -57,7 +57,7 @@ function FighterSearch({ onSelect }) {
         placeholder="Search Fighter"
         value={query}
         onChange={handleChange}
-        style={{ width: "300px", padding: "8px" }}
+        style={{ width: "350px", padding: "8px" }}
       />
       {loading && <div>Loading...</div>}
       {error && <div style={{ color: "red" }}>{error}</div>}
@@ -65,7 +65,7 @@ function FighterSearch({ onSelect }) {
         <ul
           className="search-results"
           style={{
-            position: "absolute",
+            // position: "absolute",
             backgroundColor: "#fff",
             border: "1px solid #ccc",
             listStyle: "none",
