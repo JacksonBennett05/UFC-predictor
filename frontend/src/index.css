@@ -3,3 +3,31 @@
     margin: 0px;
     padding: 0px;
 }
+
+.header {
+  /* margin-left: 200px;
+  margin-right: 200px; */
+  text-align: center;
+  background-color: black;
+  color: red;
+}
+
+.search-container {
+  margin-top: 50px;
+  text-align: center;
+  display: flex;  
+  justify-content: center;  
+  /* gap: 10px;    */
+}
+
+.fighter-column1,
+.fighter-column2 {
+  padding: 0;               
+  margin: 0;
+  width: auto;
+  flex: 1;
+}
+
+.fight-button {
+  cursor: pointer;
+}

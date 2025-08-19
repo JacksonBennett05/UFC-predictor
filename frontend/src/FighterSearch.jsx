@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function FighterSearch({ onSelect }) {
   const [query, setQuery] = useState("");
@@ -18,7 +18,7 @@ function FighterSearch({ onSelect }) {
     setError("");
 
     try {
-      // Call your backend API to get fighter list filtered by name
+      // Call backend API to get fighter list filtered by name
       // Adjust URL and query params as your backend supports
       const response = await fetch(
         `http://127.0.0.1:5000/fighters?search=${value}`
@@ -47,7 +47,7 @@ function FighterSearch({ onSelect }) {
   const handleSelect = (name) => {
     setQuery(name);
     setResults([]);
-    onSelect(name); // Notify parent component
+    onSelect(name);
   };
 
   return (
