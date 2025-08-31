@@ -59,10 +59,35 @@ function FightSimulator() {
       </div>
 
       {result && (
-        <div className="result">
-          <h2>🏆 Winner: {result.winner}</h2>
-          <p>{result.explanation}</p>
-        </div>
+        <div>
+          <div className="result">
+            <h2>🏆 Winner: {result.winner}</h2>
+            <p>{result.explanation}</p>
+          </div>
+          <div className="fight-breakdown">
+            <h3>Category Breakdown</h3>
+            <ul>
+              {Object.entries(result.breakdown).map(([category, winner]) => {
+                console.log("Category:", category);
+                console.log("Winner from breakdown:", winner);
+                console.log("Fighter 1 from result:", result.fighter1);
+
+                return (
+                  <li key={category}>
+                  {category}:{" "}
+                  <span
+                    style={{
+                      color: winner === result.fighter1 ? "#1E90FF" : "#FF4136"
+                    }}
+                  >
+                    {winner}
+                  </span>
+                </li>
+              );
+            })}
+            </ul>
+          </div>
+        </div>  
       )}
       {error && <p style={{ color: "red" }}>{error}</p>}
     </div>

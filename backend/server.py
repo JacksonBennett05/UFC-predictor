@@ -49,8 +49,8 @@ def simulate_fight():
     if fighter1_name == fighter2_name:
         return jsonify({"error": "A fighter cannot fight themselves."}), 400
 
-    winner, reason = predict_outcome(fighter1, fighter2)
-    return jsonify({"winner": winner, "explanation": reason})
+    winner, reason, category_winners, fighter1, fighter2 = predict_outcome(fighter1, fighter2)
+    return jsonify({"winner": winner, "explanation": reason, "breakdown": category_winners, "fighter1": fighter1_name, "fighter2": fighter2_name})
 
 if __name__ == "__main__":
     app.run(debug=True)

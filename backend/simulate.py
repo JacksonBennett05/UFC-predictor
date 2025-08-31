@@ -18,8 +18,8 @@ def simulate_fight(f1_name: str, f2_name: str) -> (str, str):
     if not f2_data:
         return f"Fighter '{f2_name}' not found.", ""
 
-    winner, explanation = predict_outcome(f1_data, f2_data)
-    return winner, explanation
+    winner, explanation, category_winners, fighter1, fighter2 = predict_outcome(f1_data, f2_data)
+    return winner, explanation, category_winners, fighter1, fighter2
 
 
 if __name__ == "__main__":

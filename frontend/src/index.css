@@ -43,6 +43,14 @@
   flex-direction: column;
 }
 
+.fighter-column1 {
+  color: blue;
+}
+
+.fighter-column2 {
+  color: red;
+}
+
 .fighter-column1 label,
 .fighter-column2 label {
   text-align: center;
@@ -110,4 +118,17 @@
   border: 2px solid gold;
   border-radius: 10px;
   display: inline-block;
+}
+
+.fight-breakdown {
+  margin-top: 20px;
+  padding: 15px;
+  padding-left: 20px !important;
+  background: black;
+  color: gold;
+  font-size: 18px;
+  border: 2px solid gold;
+  border-radius: 10px;
+  max-height: 300px;
+  width: fit-content;
 }
