@@ -6,7 +6,6 @@ function FighterSearch({ onSelect }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Fetch matching fighters from backend as user types
   const fetchFighters = async (value) => {
     if (!value) {
       console.log("Querying for:", value);
@@ -18,14 +17,12 @@ function FighterSearch({ onSelect }) {
     setError("");
 
     try {
-      // Call backend API to get fighter list filtered by name
-      // Adjust URL and query params as your backend supports
       const response = await fetch(
         `http://127.0.0.1:5000/fighters?search=${value}`
       );
       if (!response.ok) throw new Error("Failed to fetch fighters");
 
-      const data = await response.json(); // Assume returns array of fighters
+      const data = await response.json();
       setResults(data);
       console.log("Fetched fighters:", data);
     } catch (err) {
@@ -35,7 +32,6 @@ function FighterSearch({ onSelect }) {
     }
   };
 
-  // Handle input change
   const handleChange = (e) => {
     const value = e.target.value;
     console.log("Querying for:", value);
@@ -43,7 +39,6 @@ function FighterSearch({ onSelect }) {
     fetchFighters(value.toLowerCase());
   };
 
-  // Handle selecting a fighter from the list
   const handleSelect = (name) => {
     setQuery(name);
     setResults([]);

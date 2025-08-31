@@ -35,29 +35,27 @@ function FightSimulator() {
         <div className="title">
           <h1>UFC Fight Simulator</h1>
         </div>
-
         <h2>Choose Your Fighters</h2>
         <p>Select two fighters to simulate a match</p>
       </div>
 
       <div className="fight-form">
-      <form onSubmit={handleSubmit}>
-        <div className="search-container">
-          <div className="fighter-column1">
-            <label>Fighter 1</label>
-            <FighterSearch onSelect={setFighter1} />
-          </div>
+        <form onSubmit={handleSubmit}>
+          <div className="search-container">
+            <div className="fighter-column1">
+              <label>Fighter 1</label>
+              <FighterSearch onSelect={setFighter1} />
+            </div>
 
-          <div className="fighter-column2">
-            <label>Fighter 2</label>
-            <FighterSearch onSelect={setFighter2} />
-          
-        </div>
-        <div className="fight-button">
-          <button type="submit">Fight</button>
-        </div>
-        </div>
-      </form>
+            <div className="fighter-column2">
+              <label>Fighter 2</label>
+              <FighterSearch onSelect={setFighter2} />
+            </div>
+            <div className="fight-button">
+              <button type="submit">Fight</button>
+            </div>
+          </div>
+        </form>
       </div>
 
       {result && (

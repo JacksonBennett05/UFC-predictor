@@ -56,12 +56,12 @@
 
 .search-results {
   text-align: left;
-  position: absolute;       /* make dropdown appear over content */
-  top: 100%;                /* directly below input */
+  position: absolute;
+  top: 100%;
   left: 0;
   width: 100%;
   gap: 50px;
-  max-height: 200px;        /* limit height */
+  max-height: 200px;
   overflow-y: scroll;    
   border: 1px solid gold;
   border-radius: 5px;
