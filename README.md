@@ -23,11 +23,8 @@ A Python tool that scrapes UFCStats.com and predicts the winner of a hypothetica
 1. **Scrape Fighters**  
    ```bash
    python scraper.py
-
-2. **Simulate**
-   ```bash
-   #Enter two fighter names when prompted.
-   python simulate.py
+2. **Disclaimer:**
+   Scraper will take 60-90 minutes to run
 
 ## Running the Application
 
