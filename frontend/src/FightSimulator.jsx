@@ -44,12 +44,12 @@ function FightSimulator() {
           <div className="search-container">
             <div className="fighter-column1">
               <label>Fighter 1</label>
-              <FighterSearch onSelect={setFighter1} />
+              <FighterSearch onSelect={setFighter1} corner="blue"/>
             </div>
 
             <div className="fighter-column2">
               <label>Fighter 2</label>
-              <FighterSearch onSelect={setFighter2} />
+              <FighterSearch onSelect={setFighter2} corner="red"/>
             </div>
             <div className="fight-button">
               <button type="submit">Fight</button>

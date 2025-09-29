@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function FighterSearch({ onSelect }) {
+function FighterSearch({ onSelect, corner }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -48,6 +48,7 @@ function FighterSearch({ onSelect }) {
   return (
     <div className="fighter-search" style={{ position: "relative" }}>
       <input
+      className={`fighter-input ${corner}-corner`}
         type="text"
         placeholder="Search Fighter"
         value={query}
@@ -60,7 +61,6 @@ function FighterSearch({ onSelect }) {
         <ul
           className="search-results"
           style={{
-            // position: "absolute",
             backgroundColor: "#fff",
             border: "1px solid #ccc",
             listStyle: "none",
