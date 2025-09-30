@@ -1,5 +1,3 @@
-# Summer25
-
 # UFC Fight Predictor
 
 A Python tool that scrapes UFCStats.com and predicts the winner of a hypothetical fight using real fighter data.
