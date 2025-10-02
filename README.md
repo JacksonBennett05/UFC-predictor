@@ -10,6 +10,14 @@ Includes a custom web scraper to collect and update fighter statistics used in p
 - Simulates matchups between any two fighters
 - Uses rule-based logic to predict winner and explain outcome
 
+## Preview
+
+### Web UI
+<img src="docs/ui.png" alt="UFC Predictor Web UI" width="600"/>
+
+*Example of the UFC Predictor web interface. Users can search fighters, simulate a matchup, and view the predicted winner along with explanation.*
+
+
 ## Files
 
 - `scraper.py`: Scrapes and saves fighter stats to CSV  
