@@ -1,6 +1,7 @@
 # UFC Fight Predictor
-
-A Python tool that scrapes UFCStats.com and predicts the winner of a hypothetical fight using real fighter data.
+A UFC fight outcome predictor built with a React frontend and Flask backend.  
+Features fighter search, matchup simulation, and result visualization.  
+Includes a custom web scraper to collect and update fighter statistics used in predictions.
 
 ## Features
 
