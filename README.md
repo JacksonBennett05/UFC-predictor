@@ -31,9 +31,9 @@ Includes a custom web scraper to collect and update fighter statistics used in p
    ```bash
    python scraper.py
 2. **Disclaimer:**
-   Scraper will take 60-90 minutes to run
-   Alternatively, you can use the already scraped data
-   The dataset was last updated on **July 13th 2025**
+   - Scraper will take 60-90 minutes to run
+   - Alternatively, you can use the already scraped data
+   - The dataset was last updated on **July 13th 2025**
 
 ## Running the Application
 
