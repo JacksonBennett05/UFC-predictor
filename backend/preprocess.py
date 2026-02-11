@@ -1,7 +1,7 @@
 import csv
 
 # Loads fighter data from a CSV into a dict with typed fields for easy access.
-# Handles missing or invalid data gracefully.
+# Handles missing or invalid datawher.
 
 def load_fighter_data(filepath='fighters.csv') -> dict:
     fighters = {}
@@ -15,7 +15,7 @@ def load_fighter_data(filepath='fighters.csv') -> dict:
                     "Height": float(row["Height"]) if row["Height"] else None,
                     "Reach": int(row["Reach"].replace('"', '').strip()) if row["Reach"] != '--' else None,
                     "Wins": int(row["Wins"]),
-                    # "Draws": int(row["Draws"]),
+                    "Draws": parse_draws(row.get["Draws"]),
                     "Losses": int(row["Losses"]),
                     "SLpM": float(row["SLpM"]),
                     "Str_Acc": int(row["Str_Acc"].replace('%', '').strip()),
@@ -23,6 +23,7 @@ def load_fighter_data(filepath='fighters.csv') -> dict:
                     "SApM": float(row["SApM"]),
                     "TD_Avg": float(row["TD_Avg"]),
                     "TD_Def": int(row["TD_Def"].replace('%','').strip()),
+                    "TD_ACC": float(row["TD_AVG"]),
                     "Sub_Avg": float(row["Sub_Avg"])
                 }
     except FileNotFoundError:
@@ -31,3 +32,19 @@ def load_fighter_data(filepath='fighters.csv') -> dict:
         print(f"Error loading data: {e}")
     
     return fighters
+
+# Ignores any no contests but will count normal draws
+def parse_draws(draw):
+    if draw is None: return 0
+    
+    s = str(draw).strip()
+    if not s:
+        return 0
+    
+    # Grabs the number before the (1 NC)
+    token = s.split("(")[0].strip().split()[0]
+    try:
+        return int(token)
+    except ValueError:
+        return 0
+    
