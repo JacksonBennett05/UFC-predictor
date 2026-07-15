@@ -33,10 +33,10 @@ function FightSimulator() {
     <div className="fight-sim">
       <div className="header">
         <div className="title">
-          <h1>UFC Fight Simulator</h1>
+          <h1>UFC Matchup Simulator</h1>
         </div>
-        <h2>Choose Your Fighters</h2>
-        <p>Select two fighters to simulate a match</p>
+        <h2>Compare two fighters and explore the likely outcome</h2>
+        <p>Select a matchup to see a clear breakdown of the prediction.</p>
       </div>
 
       <div className="fight-form">
@@ -89,7 +89,7 @@ function FightSimulator() {
           </div>
         </div>  
       )}
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="search-status error">{error}</p>}
     </div>
   );
 }

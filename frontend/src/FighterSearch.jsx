@@ -55,8 +55,8 @@ function FighterSearch({ onSelect, corner }) {
         onChange={handleChange}
         style={{ width: "350px", padding: "8px" }}
       />
-      {loading && <div>Loading...</div>}
-      {error && <div style={{ color: "red" }}>{error}</div>}
+      {loading && <div className="search-status">Loading...</div>}
+      {error && <div className="search-status error">{error}</div>}
       {results.length > 0 && (
         <ul
           className="search-results"
